@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+body {
+  background-color: #EDEDF9;
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+  text-align: center;
+  margin: 60px 0 0;
+}
+input {
+  border: 2px  solid #EFEFFF ;
+  border-radius: 8px;
+  outline: none;
+  width: min(250px,350px);
+  height: 50px;
+  padding: 0 8px;
+  box-shadow: 0 16px 35px -15px #0205845c;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn {
+  width: min(72px, 100px);
+  height: 45px;
+  border-radius: 5px;
+  background-color:#262847 ;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+main {
+  background-color: #FFFEFC;
+  width: 90%;
+  max-width: 880px;
+  margin: 60px auto;
+  padding: min(18px, 40px);
+  border-radius: 10px;
+  box-shadow: 0 15px 45px rgb(24 27 121 / 12%);
+}
+h1 {
+  font-weight: 800;
+  margin: 0;
+}
+hr {
+  border: 1px solid #efefff;
+}
+ul {
+  line-height: 2;
+}
+li {
+  position: relative;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 22px;
+  padding-left: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+main {
+  overflow: scroll;
+  width: 100%;
+}
+ul {
+  padding-left: 24px;
+
+}
+}
+li:hover  {
+  list-style: none;
+}
+
+li:hover span:nth-child(1) {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  left: -33px;
+  top: 13px;
+  background-image: url('./icons8-hand-right-96.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.done {
+  text-decoration: line-through;
+  list-style: none;
+  opacity: 0.5;
+}
+.done span:nth-child(1) {
+  background-image: url('./icons8-checkmark-96.png');
+  display: inline-block;
+  width: 21px;
+  height: 25px;
+  position: absolute;
+  left: -33px;
+  top: 13px;
+  background-size: contain;
+}
+@keyframes bullet {
+  to {
+    transform: rotate(-80deg);
+  }
+}
+.del {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  transform: translate(20px, 7px);
+  /* position: absolute;
+  top: 13px;
+  left: 550px; */
+  background-image: url('./icons8-trash-96.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.del:hover {
+  background-image: url('./icons8-trash.gif');
+}
